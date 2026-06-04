@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Lane Book Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="#home">Chapter Lane</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#books">Books</a>
+        <a href="#deals">Deals</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="cart-button" type="button">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Local book shop</p>
+        <h1>Find your next favorite story.</h1>
+        <p class="hero-text">
+          Browse hand-picked novels, study guides, children books, and bestsellers
+          from a cozy neighborhood book shop.
+        </p>
+        <a class="primary-button" href="#books">Shop Books</a>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div>
+        <p class="eyebrow">Why visit us</p>
+        <h2>A book shop for every reader</h2>
+      </div>
+      <p>
+        Chapter Lane offers friendly recommendations, affordable prices, and a calm
+        place to discover books for school, work, hobbies, and relaxing weekends.
+      </p>
+    </section>
+
+    <section class="section" id="books">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Featured shelves</p>
+          <h2>Popular Books</h2>
+        </div>
+        <select id="categoryFilter" aria-label="Filter books by category">
+          <option value="all">All Categories</option>
+          <option value="fiction">Fiction</option>
+          <option value="study">Study</option>
+          <option value="children">Children</option>
+          <option value="biography">Biography</option>
+          <option value="business">Business</option>
+        </select>
+      </div>
+
+      <div class="book-grid" id="bookGrid">
+        <article class="book-card" data-category="fiction">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80" alt="Open fiction book on a table">
+          <div class="book-info">
+            <p class="book-category">Fiction</p>
+            <h3>The Quiet Harbor</h3>
+            <p>A warm novel about friendship, family, and starting again.</p>
+            <div class="book-footer">
+              <span>INR 499.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="study">
+          <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Stack of study books">
+          <div class="book-info">
+            <p class="book-category">Study</p>
+            <h3>Smart Study Skills</h3>
+            <p>Simple methods for planning, revising, and learning faster.</p>
+            <div class="book-footer">
+              <span>INR 650.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="children">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80" alt="Colorful books on a shelf">
+          <div class="book-info">
+            <p class="book-category">Children</p>
+            <h3>Adventure in Moon Park</h3>
+            <p>A bright illustrated story for curious young readers.</p>
+            <div class="book-footer">
+              <span>INR 299.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="fiction">
+          <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80" alt="Books standing upright on a shelf">
+          <div class="book-info">
+            <p class="book-category">Fiction</p>
+            <h3>Midnight Letters</h3>
+            <p>A mystery story filled with secrets, clues, and surprise twists.</p>
+            <div class="book-footer">
+              <span>INR 399.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="biography">
+          <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=600&q=80" alt="Biography book beside glasses">
+          <div class="book-info">
+            <p class="book-category">Biography</p>
+            <h3>Life of a Leader</h3>
+            <p>An inspiring biography about courage, discipline, and service.</p>
+            <div class="book-footer">
+              <span>INR 550.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="business">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Business notes and laptop on desk">
+          <div class="book-info">
+            <p class="book-category">Business</p>
+            <h3>Start Small, Grow Big</h3>
+            <p>A practical guide for building a small business step by step.</p>
+            <div class="book-footer">
+              <span>INR 720.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="study">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Student writing notes beside books">
+          <div class="book-info">
+            <p class="book-category">Study</p>
+            <h3>Math Made Easy</h3>
+            <p>Clear examples and practice questions for school mathematics.</p>
+            <div class="book-footer">
+              <span>INR 480.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="book-card" data-category="children">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=600&q=80" alt="Child reading a colorful book">
+          <div class="book-info">
+            <p class="book-category">Children</p>
+            <h3>Grandma's Story Box</h3>
+            <p>A cheerful collection of short moral stories for children.</p>
+            <div class="book-footer">
+              <span>INR 260.00</span>
+              <button class="add-cart" type="button">Add</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="deal-band" id="deals">
+      <div>
+        <p class="eyebrow">This week</p>
+        <h2>Buy 2 books and get 1 bookmark free.</h2>
+      </div>
+      <a class="secondary-button" href="#contact">Ask About Deals</a>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Visit Chapter Lane</h2>
+        <p>123 Reader Street, Booktown</p>
+        <p>Open Monday to Saturday, 9:00 AM to 7:00 PM</p>
+      </div>
+
+      <form class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+
+        <label for="phone">Contact Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="Your phone number">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ask about a book..."></textarea>
+
+        <button class="primary-button" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Chapter Lane Book Shop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
